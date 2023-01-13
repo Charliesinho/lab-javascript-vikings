@@ -83,7 +83,30 @@ class War {
             }
             return result;
     }
+
+    // bonusFive(attacker = [], defender = []) {
+    //     let randomVik = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)]
+    //     let randomSax = this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)]     
+    //     let result;
+
+    //     if (attacker === this.vikingArmy) {
+    //             result = randomSax.receiveDamage(randomVik.strength);
+    //         if (randomSax.health <= 0) {
+    //             this.saxonArmy.splice(saxIndex, this.saxonArmy.indexOf(randomSax));
+    //         }
+    //     }
+    //     else {
+    //             result = randomVik.receiveDamage(randomSax.strength);
+    //         if (randomVik.health <= 0) {
+    //             this.vikingArmy.splice(VikIndex, this.saxonArmy.indexOf(randomVik));
+    //         }
+    //     }
+    //     return result
+
+    // }
+
     showStatus() {
+        
         if ( this.saxonArmy.length === 0 ) {
             return "Vikings have won the war of the century!";
         } 
@@ -96,20 +119,4 @@ class War {
     }
 }
 
-const newWar = new War
-
-const oneVik = {
-    health : 100,
-    strength: 200,
-    name : "Charlie"
-}
-
-const oneSax = {
-    health : 220,
-    strength: 220,
-}
-
-newWar.addViking(oneVik)
-newWar.addSaxon(oneSax)
-newWar.vikingAttack()
 
